@@ -1,6 +1,8 @@
 /* Page Styles */
 @charset "utf-8";
+
 body {
+
 	font-family: sans-serif;
 	font-size: 150%;
 	line-height: 1.4;
@@ -9,8 +11,35 @@ body {
 	margin-right: auto;
 }
 
-form {
+
+form
+ {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+
+/* Chat Bubble Styles */
+
+.message 
+{
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	max-width: 70%;
+	clear: both;
+}
+
+.user 
+{
+	background-color: #ffe0b2;
+	float: right;
+	text-align: right;
+}
+
+.claude 
+{
+	background-color: #ffcc80;
+	float: left;
+	text-align: left;
 }

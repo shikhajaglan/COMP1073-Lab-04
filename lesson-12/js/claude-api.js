@@ -100,14 +100,14 @@ function sendChatMessage(){
         // STEP 8e: Handle the response
         return response.json();
     }).then(json => {
-        // LAB STEP 1b: Add Claude's response to conversationHistory
+    // LAB STEP 1b: Add Claude's response to conversationHistory
         let claudeReply = json.content[0].text;
         conversationHistory.push({ role: "assistant", content: claudeReply });
 
-        // LAB STEP 2: Display conversation in chat format
+        // LAB STEP 2: Display conversation in a chat format
         displayChat(userInput, claudeReply);
 
-        // Clear input box
+        // Clearing the input box
         userMessage.value = "";
     });
 }
@@ -124,7 +124,7 @@ function displayChat(userText, claudeText){
     claudeDiv.classList.add("message", "claude");
     claudeDiv.textContent = claudeText;
 
-    // Append both to results section
+    // Appending  both to results section
     results.appendChild(userDiv);
     results.appendChild(claudeDiv);
 }
